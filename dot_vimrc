@@ -1,32 +1,3 @@
-" plugin
-set helplang=ja
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_idx_mode=1
-let g:airline_powerline_fonts=1
-nmap <C-p> <Plug>AirlineSelectPrevTab
-nmap <C-n> <Plug>AirlineSelectNextTab
-let g:airline#extensions#tabline#buffer_idx_format = {
-	\ '0': '0 ',
-	\ '1': '1 ',
-	\ '2': '2 ',
-	\ '3': '3 ',
-	\ '4': '4 ',
-	\ '5': '5 ',
-	\ '6': '6 ',
-	\ '7': '7 ',
-	\ '8': '8 ',
-	\ '9': '9 '
-	\}
-let g:airline_theme='powerlineish'
-let g:table_mode_corner = '|'
-let NERDTreeShowHidden = 1
-nmap <C-b> :NERDTreeToggle<CR>
-let g:lsp_diagnostics_echo_cursor = 0
-let g:lsp_diagnostics_signs_enabled = 1
-let g:lsp_diagnostics_signs_error = {'text': '❌'}
-let g:lsp_diagnostics_signs_warning = {'text': '⚠'}
-let g:lsp_diagnostics_signs_hint = {'text': '💡'}
-
 " --- plugin management ---
 " dein.vim settings {{{
 " install dir {{{
@@ -84,7 +55,6 @@ set ambiwidth=double
 
 " cursor
 set cursorline
-set cursorcolumn
 set showmatch
 
 " search
@@ -100,9 +70,7 @@ if has('persistent_undo')
     set undofile
 endif
 
-" indent
-set smartindent
-set autoindent
+" indent (delegate to per-filetype indent files, no smartindent/autoindent double-up)
 filetype plugin indent on
 
 " clipboard
@@ -117,24 +85,13 @@ set wildmenu
 set ruler
 set showcmd
 
-" mouse
-" enable mouse edit
-"if has('mouse')
-"    set mouse=a
-"    if has('mouse_sgr')
-"        set ttymouse=sgr 
-"    elseif v:version > 703 || v:version is 703 && has('patch632')
-"        set ttymouse=sgr
-"    else
-"        set ttymouse=xterm2
-"    endif
-"endif
-
-" ---custom kaymap---
+" ---custom keymap---
 " open .vimrc
 nnoremap <C-s> :new ~/.vimrc<CR>
-" esc esc: delete highlight
+" esc esc: clear search highlight
 nnoremap <Esc><Esc> :nohlsearch<CR>
+" netrw sidebar (native file explorer, no plugin needed)
+nnoremap <C-b> :Lexplore<CR>
 " カッコ、クォート補完
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
@@ -146,4 +103,4 @@ vnoremap [ "zdi[<C-R>z]<ESC>
 vnoremap ( "zdi(<C-R>z)<ESC>
 vnoremap " "zdi"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
-" ---custom kaymap---
+" ---custom keymap---

@@ -1,0 +1,7 @@
+.config/nvim/nvim
+.config/nvim/lua/kickstart
+.config/nvim/lua/custom
+.config/nvim/doc
+.config/nvim/LICENSE.md
+.config/nvim/lua/lazy-bootstrap.lua
+.config/nvim/lua/lazy-plugins.lua

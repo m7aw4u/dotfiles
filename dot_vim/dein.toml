@@ -1,70 +1,11 @@
 [[plugins]]
-repo = 'junegunn/fzf'
-build_on = '''
-./install -all
-'''
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
-repo = 'markonm/traces.vim'
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
+repo = 'tpope/vim-sleuth'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
-repo = 'dhruvasagar/vim-table-mode'
-
-[[plugins]]
-repo = 'simeji/winresizer'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
-#[[plugins]]
-#repo = 'dense-analysis/ale'
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-hook_add = '''
-  " Show diagnostics message to status line
-  let g:lsp_diagnostics_echo_cursor = 1
-'''
-
+repo = 'markonm/traces.vim'

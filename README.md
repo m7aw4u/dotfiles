@@ -22,9 +22,11 @@ chezmoi で管理している個人のdotfiles
 |---|---|
 | `~/.zshrc` | zsh設定（OS別に自動切り替え） |
 | `~/.tmux.conf` | tmux設定 |
-| `~/.vimrc` | vim設定 |
+| `~/.vimrc` | vim設定（フォールバック用途、詳細は[`dot_vim/README.md`](dot_vim/README.md)） |
 | `~/.vim/` | vim関連ファイル |
-| `~/.config/nvim/` | neovim設定 |
+| `~/.config/nvim/` | neovim設定（メインエディタ、詳細は[`dot_config/nvim/README.md`](dot_config/nvim/README.md)） |
+
+Vim/Neovimとも「標準機能で代替できるものはプラグインを使わない、代替困難なものだけプラグインにする」という方針で必要最小限に構成している。プラグインを足したくなったら各READMEの採用方針を先に確認すること。
 
 **管理対象でないもの（Gitにコミットされない）:**
 - `~/.zshrc.local` → マシン固有の設定（プロキシ、パス等）を書く場所
