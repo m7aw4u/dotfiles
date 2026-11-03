@@ -25,6 +25,7 @@ chezmoi で管理している個人のdotfiles
 | `~/.vimrc` | vim設定（フォールバック用途、詳細は[`dot_vim/README.md`](dot_vim/README.md)） |
 | `~/.vim/` | vim関連ファイル |
 | `~/.config/nvim/` | neovim設定（メインエディタ、詳細は[`dot_config/nvim/README.md`](dot_config/nvim/README.md)） |
+| `~/.claude/` | Claude Code のユーザー設定（一部のみ管理、詳細は[`dot_claude/README.md`](dot_claude/README.md)） |
 
 Vim/Neovimとも「標準機能で代替できるものはプラグインを使わない、代替困難なものだけプラグインにする」という方針で必要最小限に構成している。プラグインを足したくなったら各READMEの採用方針を先に確認すること。
 

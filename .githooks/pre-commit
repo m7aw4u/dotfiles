@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Block commits that change CLAUDE.md without also updating its Japanese translation.
+set -euo pipefail
+
+staged="$(git diff --cached --name-only)"
+
+if ! grep -qx 'dot_claude/CLAUDE.md' <<<"$staged"; then
+  exit 0
+fi
+
+if grep -qx 'dot_claude/CLAUDE.ja.md' <<<"$staged"; then
+  exit 0
+fi
+
+echo "pre-commit: dot_claude/CLAUDE.md is staged but dot_claude/CLAUDE.ja.md is not." >&2
+echo "Update the Japanese translation, or bypass with 'git commit --no-verify' if intentional." >&2
+exit 1

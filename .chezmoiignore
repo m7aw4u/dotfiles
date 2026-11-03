@@ -2,3 +2,25 @@ README.md
 .vscode/
 .git/
 .zshrc.local
+
+# Claude Code runtime data: never manage (allowlist is the primary control)
+.claude/projects
+.claude/history.jsonl
+.claude/todos
+.claude/shell-snapshots
+.claude/statsig
+.claude/ide
+.claude/session-env
+.claude/sessions
+.claude/file-history
+.claude/plugins
+.claude/skills/synced
+.claude/backups
+.claude/cache
+.claude/downloads
+.claude/paste-cache
+.claude/stats-cache.json
+.claude/.last-cleanup
+.claude/.credentials.json
+.claude.json
+.claude.json.backup*
